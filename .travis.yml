@@ -6,7 +6,7 @@ script: gulp build && gulp offline
 env:
   global:
     - secure: >-
-        Qdf5s2dGzYzqvwRNzS9nUJliVQ28jn4SDaboirt382l6IygtiqE5Mn32NeyL7x3GHBSxUOIcQS0AiKo4bOlsRldrmWhKnu0MMr5yVE7+/8Gy3/WXBiH6P05dA0+Rrk5fhSigpT4as8i18+nBTgHUTMlSHY07va1ML6xuKTRnwg3szSVoUFZfhFLobDdRloxmS2ioV6mCvCoGYClCkFid9UhHINh/zFog+Vfktl5pxPXMdFgg8vUFIL+qXpPmrP0lDKzoc/S6vKQGxpajABl9IJs9nBqOiZsWhPca+PtIYvGRo2SHZbh9qRUXujmTP0K24cu6sLh3+Ck/8wt/ofXnM1br9gQ3SqecOQDakCj6yAjFYkK4r3t2ACm/kr8IoPkGpGHe8KQsL3ButMGnyIfW4C9+9AqEHRGF/F+dH3ueRF1jwf/Ay3IKl8lsm5ymp9eNlxBLcQ4KmnFq3qIys/tZdHz9tu4/+lJBNoZEl8VV6DyJvbHP8XMD0CoAYnj8Yblv+6excNOphGJrkK91/aqtMfF/kiT1Ov0v9pNk2uFIzo+xd2VFlcr8TrzfemMAtAwnBnzIH8p3Hy0Nq0x6I+SoUp+fGoHcyHi6XSOXE0IZdAiJ9AObjNkh/T1rspa8SN6CRO9OQBMEcGMdVhYuMRn9rkSG6ns4SycZFghVwd7TPrM=
+        f3Tn633VWs8EDrgX52nLEnAsgbza+rRdFOOwBGo2a2QXm9Sl8OIwUyPp91xKBsW8/lHe0gg4jvGctF1boXqr2OBvyQB9nEQD7qbCiy+t8HEMPKG8AShKCoKYGFb2SmgDUl5BeJqtmNjfyssJTSPJO6tb6qzBMw43K+C48Mqj13IJTV3spJXEe5fdUAA1RgJJPsXLoOZ7UcPIZH4Z+x2vhSCF0Y3MTgHyRhD1Xo5O0EiKPRNMXj4QkgejuaFJIdnPinyIhNw+hv67UQH2JfP1WescMhkjb6p5DNKq8EoDVuhoq0BLvPG9pyibjGHC7iRQmxWiMI5YGqE7UwP4ebLH1NpkRC0VCpRroKlMpTRtWIEHg3JUYTsrAeR/LKuY0Okir52o9ARxwbMWKKwjq9ucdiNP5UGaikcmc+hgEEdjWQW4Kh5pu4Botxpjs7rqkmKtYa/88k1kMvYonkS9suL4ZjVWNJLl2c3VlgUtgjNy0atUbSuZUCYUMQyM1j6tmJFktv0fBWD/J5cht5EzReaXIlMdnoXPIo6Aq1R6VMSkazB9jpOhmSnmS7p71ZeOJaflEgac0681e6H+SGxVEq/UUgkXSSwABgEhHkrVDYwayN8H+QmJ065gwaplzuFAD/A1+oB61C91YLxKIb/ShqNoSXhz8uSqbW9MRQW2zZcGn94=
 before_script:
   - git config --global user.name "Travis CI"
   - git config --global user.email "imjaroiswebdev@gmail.com"
@@ -14,6 +14,6 @@ deploy:
   provider: script
   script: >-
     echo "travis_fold:end:deploy" && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [
-    "${TRAVIS_BRANCH}" = "master" ] && echo "Deploying…" && gulp deploy
+    "${TRAVIS_BRANCH}" = "master" ] && echo "Deploying…" && npx gulp deploy
   'on':
     branch: master
