@@ -14,8 +14,6 @@ before_deploy:
   - npm install -g gulp-cli && npm install
 deploy:
   provider: script
-  script: >-
-    echo "travis_fold:end:deploy" && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [
-    "${TRAVIS_BRANCH}" = "master" ] && echo "Deploying…" && gulp deploy
+  script: bash scripts/deploy.sh
   'on':
     branch: master
