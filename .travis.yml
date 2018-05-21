@@ -11,6 +11,7 @@ before_script:
   - git config --global user.name "Travis CI"
   - git config --global user.email "imjaroiswebdev@gmail.com"
 deploy:
+  skip_cleanup: true
   provider: script
   script: bash scripts/deploy.sh
   'on':
