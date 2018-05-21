@@ -3,4 +3,4 @@ echo "travis_fold:end:deploy" && \
 export TRAVIS_PULL_REQUEST="false" && \
 export TRAVIS_BRANCH="master" && \
 echo "Deploying…" && \
-gulp deploy
+npm install -g gulp-cli && gulp deploy
