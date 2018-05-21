@@ -12,6 +12,7 @@ before_script:
   - git config --global user.email "imjaroiswebdev@gmail.com"
 before_deploy:
   - npm install -g gulp-cli
+  - npm install
 deploy:
   provider: script
   script: >-
