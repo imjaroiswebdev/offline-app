@@ -10,8 +10,6 @@ env:
 before_script:
   - git config --global user.name "Travis CI"
   - git config --global user.email "imjaroiswebdev@gmail.com"
-before_deploy:
-  - npm install -g gulp-cli && npm install
 deploy:
   provider: script
   script: bash scripts/deploy.sh
